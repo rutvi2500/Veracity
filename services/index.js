@@ -150,6 +150,7 @@ export const getFeaturedPosts = async () => {
 
   return result.posts;
 }; 
+
 export const getCategoryPost = async (slug) => {
   const query = gql`
     query GetCategoryPost($slug: String!) {
@@ -181,8 +182,14 @@ export const getCategoryPost = async (slug) => {
       }
     }
   `;
-
   const result = await request(graphqlAPI, query, { slug });
-
   return result.postsConnection.edges;
 };
+
+export const submitComment = async (obj) => {
+  const result = await fetch('/api/comments', {
+    method: 'POST',
+    body: JSON.stringify(obj),
+  })
+  return result.json();
+}

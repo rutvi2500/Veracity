@@ -1,5 +1,6 @@
+import React, { useState } from 'react';
 import Head from "next/head";
-import { PostCard, Categories, PostWidget} from "../components";
+import { PostCard, Categories, PostWidget, Boat} from "../components";
 import { getPosts } from "../services"
 import FeaturedPosts from "../sections/FeaturedPosts"
 
@@ -17,9 +18,9 @@ export default function Home({ posts }) {
         </div>
         <div className='lg:col-span-4 col-span-1'>
           <div className="lg:sticky relative top-8">
+            <Boat />
             <PostWidget />
             <Categories />
-            <div>boat</div>
           </div>
         </div>
       </div>

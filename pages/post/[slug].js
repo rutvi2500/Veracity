@@ -1,6 +1,7 @@
 import React from "react";
 import { getPosts, getPostDetails } from "../../services";
-import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm } from "../../components"
+import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, Boat } from "../../components"
+import Contact from "../../components/Contact";
 
 const PostDetails = ({ post }) => {
   console.log(post);
@@ -15,9 +16,10 @@ const PostDetails = ({ post }) => {
         </div>
         <div className="col-span-1 lg:col-span-4">
           <div className="relative lg:sticky top-8">
+            <Boat />
             <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug)} />
             <Categories />
-            <div>boat</div>
+            <Contact />
           </div>          
         </div>
       </div>

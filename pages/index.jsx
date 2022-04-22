@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from "next/head";
-import { PostCard, Categories, PostWidget, Boat} from "../components";
+import { PostCard, Categories, PostWidget, Boat, Contact} from "../components";
 import { getPosts } from "../services"
 import FeaturedPosts from "../sections/FeaturedPosts"
 
@@ -21,6 +21,7 @@ export default function Home({ posts }) {
             <Boat />
             <PostWidget />
             <Categories />
+            <Contact />
           </div>
         </div>
       </div>

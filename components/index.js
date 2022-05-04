@@ -11,3 +11,4 @@ export { default as FeaturedPostCard } from "./FeaturedPostCard";
 export { default as Loader } from "./Loader";
 export { default as Boat } from "./Boat";
 export { default as Contact } from "./Contact";
+export { default as AdjacentPostCard } from "./AdjacentPostCard";

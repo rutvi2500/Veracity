@@ -1,7 +1,8 @@
 import React from "react";
 import { getPosts, getPostDetails } from "../../services";
-import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, Boat } from "../../components"
+import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, Boat, AdjacentPostCard } from "../../components"
 import Contact from "../../components/Contact";
+import { AdjacentPosts } from "../../sections";
 
 const PostDetails = ({ post }) => {
   console.log(post);
@@ -11,6 +12,7 @@ const PostDetails = ({ post }) => {
         <div className="col-span-1 lg:col-span-8">
           <PostDetail post = {post} />
           <Author author = {post.author} />
+          <AdjacentPosts slug={post.slug} createdAt={post.createdAt} />
           <CommentsForm slug = {post.slug} />
           <Comments slug = {post.slug} />
         </div>
